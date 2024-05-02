@@ -7,7 +7,7 @@ function User() {
     const {name} = params
    
     const location = useLocation()
-    console.log(location)
+    // console.log(location)
 
   return (
     <Layout>

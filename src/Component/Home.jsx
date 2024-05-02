@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 function Home() {
     const location = useLocation()
-    console.log(location)
+    // console.log(location)
   return (
     <Layout>
       <h1>Hello Home</h1>

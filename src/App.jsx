@@ -17,6 +17,8 @@ import Contact from './Component/Contact';
 import Company from './NestedRoutes/Company';
 import Channel from './NestedRoutes/Channel';
 import Other from './NestedRoutes/Other';
+import Login from './Page/Login';
+import ProtectRoute from './ProtectRoute/ProtectRoute';
 
 
 function App() {
@@ -26,8 +28,11 @@ function App() {
     <>
     <Router>
      <Routes>
-      <Route path='/' element={<Home/>}></Route>
-      <Route path='/About' element={<About/>}></Route>
+      <Route path='/' element={<ProtectRoute Component={Home}/>}/>
+     <Route path='/Login' element={<Login/>} />
+     
+      <Route path='/About' element={<ProtectRoute Component={About}/>}></Route> 
+      
       {/* Routing with params */}
       <Route path="/user/:name" element={<User/>}></Route>  
       <Route path='/Filter' element={<Filter/>}></Route> 
