@@ -21,6 +21,7 @@ import Login from './Page/Login';
 import ProtectRoute from './ProtectRoute/ProtectRoute';
 import Inter from './Component/Inter';
 import ComponentC from './Component/componentC';
+import CounterOne from './Component/CounterOne';
 
 export const UserContext = createContext()
  export const Channelcontext = createContext()
@@ -30,12 +31,12 @@ function App() {
   return (
     <>
      {/* <Inter/> */}
-     <UserContext.Provider value={"Vishvas"}>
+     {/* <UserContext.Provider value={"Vishvas"}>
       <Channelcontext.Provider value={"Mohit"}>
      <ComponentC/>
      </Channelcontext.Provider>
-     </UserContext.Provider>
-    
+     </UserContext.Provider> */}
+    <CounterOne/>
     <Router>
      <Routes>
       {/* <Route path='/' element={<ProtectRoute Component={Home}/>}/>
