@@ -40,11 +40,11 @@ function App() {
   
   return (
    <>
+   {/* yai abhi bhi rerender ho raha h isly hum usecallback hook ka use kragai or sath mai usememo hook ka bhi */}
   {/* <DataFetchingOne/> */}
+  {/* buttton per click karo to age rerender hoti h isly hum usememo hook ka use karaigai  when it use all the component render ones*/}
   <Parentcomponent/>
-    {/* <Count text="age" count={age} />
-    <Button>Increment age</Button>
-    <Count text="salary" count={salary}></Count> */}
+    
    </>
   )
 }
