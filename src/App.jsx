@@ -19,6 +19,7 @@ import Channel from './NestedRoutes/Channel';
 import Other from './NestedRoutes/Other';
 import Login from './Page/Login';
 import ProtectRoute from './ProtectRoute/ProtectRoute';
+import Inter from './Component/Inter';
 
 
 function App() {
@@ -26,28 +27,30 @@ function App() {
 
   return (
     <>
+     <Inter/>
     <Router>
      <Routes>
-      <Route path='/' element={<ProtectRoute Component={Home}/>}/>
+      {/* <Route path='/' element={<ProtectRoute Component={Home}/>}/>
      <Route path='/Login' element={<Login/>} />
      
       <Route path='/About' element={<ProtectRoute Component={About}/>}></Route> 
       
       {/* Routing with params */}
-      <Route path="/user/:name" element={<User/>}></Route>  
-      <Route path='/Filter' element={<Filter/>}></Route> 
+      {/* <Route path="/user/:name" element={<User/>}></Route>  
+      <Route path='/Filter' element={<Filter/>}></Route>  */}
 
-      <Route path='/Contact/' element={<Contact/>}>
+      {/* <Route path='/Contact/' element={<Contact/>}> */}
         {/* nested routing use <Outlet/> when write Link */}
-      <Route path='Company' element = {<Company/>}></Route> 
+      {/* <Route path='Company' element = {<Company/>}></Route> 
       <Route path='Channel' element = {<Channel/>}></Route> 
-      <Route path='Other' element = {<Other/>}></Route> 
+      <Route path='Other' element = {<Other/>}></Route>  */} 
+     
        
-      </Route>
+      {/* </Route> */}
 
 
      {/* <Route path='/*' element={<Page404/>}></Route> */} 
-     <Route path='/*' element={<Navigate to="/" />} />    
+     {/* <Route path='/*' element={<Navigate to="/" />} />     */}
      {/* is method sai hamai 404page banania ki jarurath nahi hogi */}
      </Routes>
     </Router> 

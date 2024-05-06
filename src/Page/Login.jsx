@@ -25,8 +25,8 @@ function Login() {
       <input type='text'/> <br/>
       <input type='text' /> <br/>
       <button onClick={logins}>Login</button>
-    </div>
-    </Layout>
+    </div> 
+    </Layout> 
   );
 }
 

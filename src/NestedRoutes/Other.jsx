@@ -4,7 +4,7 @@ function Other() {
   return (
     <div>
       <h1>Other pages</h1>
-    </div>
+    </div> 
   );
 }
 

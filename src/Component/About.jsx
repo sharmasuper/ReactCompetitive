@@ -11,7 +11,7 @@ function About() {
         <Link to="/user/anil" state={{name:'anil sidhu',age:'40'}}>anil</Link> <br/>
         <Link to="/user/peter" >peter</Link> <br/>
         <Link to="/user/bruce">bruce</Link> <br/>
-      </ul>
+      </ul>  
     </Layout>
   );
 }
