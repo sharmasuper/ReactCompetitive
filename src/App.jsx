@@ -26,72 +26,18 @@ import CounterTwo from './Component/CounterTwo';
 import CounterThree from './Component/CounterThree';
 import ComponentA from './Component/ComponentA';
 import ComponentB from './Component/ComponentB';
+import DataFetchingOne from './NestedRoutes/DataFetchingOne';
 export const CountContext = createContext()
 const initialState = 0
-
-const reducer = (state,action) =>{
-  switch(action) {
-    case "increment" :
-      return state+1
-    case "decrement" :
-       return state-1
-    case 'reset':
-      return initialState
-     default :
-      return state      
-  }
-}
-
 
 
 function App() {
  
-  const [count,dispatch] = useReducer(reducer,initialState)
-   
+  
   return (
-    <>
-    <CountContext.Provider value={{countState:count,countdispatch : dispatch}}>
-    <ComponentA/>
-    <ComponentB/>
-    <ComponentC/>
-    </CountContext.Provider>
-     {/* <Inter/> */}
-     {/* <UserContext.Provider value={"Vishvas"}>
-      <Channelcontext.Provider value={"Mohit"}>
-     <ComponentC/>
-     </Channelcontext.Provider>
-     </UserContext.Provider> */}
-    {/* <CounterOne/>
-    <CounterTwo/>
-    <CounterThree/> */}
-    <Router>
-     <Routes>
-      {/* <Route path='/' element={<ProtectRoute Component={Home}/>}/>
-     <Route path='/Login' element={<Login/>} />
-     
-      <Route path='/About' element={<ProtectRoute Component={About}/>}></Route> 
-      
-      {/* Routing with params */}
-      {/* <Route path="/user/:name" element={<User/>}></Route>  
-      <Route path='/Filter' element={<Filter/>}></Route>  */}
-
-      {/* <Route path='/Contact/' element={<Contact/>}> */}
-        {/* nested routing use <Outlet/> when write Link */}
-      {/* <Route path='Company' element = {<Company/>}></Route> 
-      <Route path='Channel' element = {<Channel/>}></Route> 
-      <Route path='Other' element = {<Other/>}></Route>  */} 
-     
-       
-      {/* </Route> */}
-
-
-     {/* <Route path='/*' element={<Page404/>}></Route> */} 
-     {/* <Route path='/*' element={<Navigate to="/" />} />     */}
-     {/* is method sai hamai 404page banania ki jarurath nahi hogi */}
-     </Routes>
-    </Router> 
-      
-    </>
+   <>
+  <DataFetchingOne/>
+   </>
   )
 }
 
