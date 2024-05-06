@@ -23,6 +23,7 @@ import Inter from './Component/Inter';
 import ComponentC from './Component/componentC';
 import CounterOne from './Component/CounterOne';
 import CounterTwo from './Component/CounterTwo';
+import CounterThree from './Component/CounterThree';
 
 export const UserContext = createContext()
  export const Channelcontext = createContext()
@@ -39,6 +40,7 @@ function App() {
      </UserContext.Provider> */}
     <CounterOne/>
     <CounterTwo/>
+    <CounterThree/>
     <Router>
      <Routes>
       {/* <Route path='/' element={<ProtectRoute Component={Home}/>}/>
