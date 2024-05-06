@@ -27,6 +27,7 @@ import CounterThree from './Component/CounterThree';
 import ComponentA from './Component/ComponentA';
 import ComponentB from './Component/ComponentB';
 import DataFetchingOne from './NestedRoutes/DataFetchingOne';
+import DataFetchingTwo from './NestedRoutes/DataFetchingTwo';
 export const CountContext = createContext()
 const initialState = 0
 
@@ -36,7 +37,8 @@ function App() {
   
   return (
    <>
-  <DataFetchingOne/>
+  {/* <DataFetchingOne/> */}
+  <DataFetchingTwo/>
    </>
   )
 }
