@@ -7,11 +7,11 @@ const initialState = {
 
 const reducer = (state,action) =>{
   switch(action.type) {
-    case "increment" :
+    case "increment" : 
       return {...state,fristCounter:state.fristCounter+1 +action.value}
     case "decrement" :
        return {...state,fristCounter:state.fristCounter-1 + action.value}
-
+ 
        case "increment2" :
         return {...state,secondCounter:state.secondCounter+1 +action.value}
 

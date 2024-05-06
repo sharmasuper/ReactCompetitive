@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useReducer, useState } from 'react'
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,23 +24,46 @@ import ComponentC from './Component/componentC';
 import CounterOne from './Component/CounterOne';
 import CounterTwo from './Component/CounterTwo';
 import CounterThree from './Component/CounterThree';
+import ComponentA from './Component/ComponentA';
+import ComponentB from './Component/ComponentB';
+export const CountContext = createContext()
+const initialState = 0
 
-export const UserContext = createContext()
- export const Channelcontext = createContext()
+const reducer = (state,action) =>{
+  switch(action) {
+    case "increment" :
+      return state+1
+    case "decrement" :
+       return state-1
+    case 'reset':
+      return initialState
+     default :
+      return state      
+  }
+}
+
+
+
 function App() {
  
-
+  const [count,dispatch] = useReducer(reducer,initialState)
+   
   return (
     <>
+    <CountContext.Provider value={{countState:count,countdispatch : dispatch}}>
+    <ComponentA/>
+    <ComponentB/>
+    <ComponentC/>
+    </CountContext.Provider>
      {/* <Inter/> */}
      {/* <UserContext.Provider value={"Vishvas"}>
       <Channelcontext.Provider value={"Mohit"}>
      <ComponentC/>
      </Channelcontext.Provider>
      </UserContext.Provider> */}
-    <CounterOne/>
+    {/* <CounterOne/>
     <CounterTwo/>
-    <CounterThree/>
+    <CounterThree/> */}
     <Router>
      <Routes>
       {/* <Route path='/' element={<ProtectRoute Component={Home}/>}/>
