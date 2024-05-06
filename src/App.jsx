@@ -31,6 +31,7 @@ import DataFetchingTwo from './NestedRoutes/DataFetchingTwo';
 import Count from './NestedRoutes/Count';
 import Button from './NestedRoutes/Button';
 import Parentcomponent from './NestedRoutes/Parentcomponent';
+import Counter from './NestedRoutes/Counter';
 export const CountContext = createContext()
 const initialState = 0
 
@@ -43,8 +44,8 @@ function App() {
    {/* yai abhi bhi rerender ho raha h isly hum usecallback hook ka use kragai or sath mai usememo hook ka bhi */}
   {/* <DataFetchingOne/> */}
   {/* buttton per click karo to age rerender hoti h isly hum usememo hook ka use karaigai  when it use all the component render ones*/}
-  <Parentcomponent/>
-    
+  {/* <Parentcomponent/> */}
+  <Counter/>
    </>
   )
 }
