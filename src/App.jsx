@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,14 +20,22 @@ import Other from './NestedRoutes/Other';
 import Login from './Page/Login';
 import ProtectRoute from './ProtectRoute/ProtectRoute';
 import Inter from './Component/Inter';
+import ComponentC from './Component/componentC';
 
-
+export const UserContext = createContext()
+ export const Channelcontext = createContext()
 function App() {
  
 
   return (
     <>
-     <Inter/>
+     {/* <Inter/> */}
+     <UserContext.Provider value={"Vishvas"}>
+      <Channelcontext.Provider value={"Mohit"}>
+     <ComponentC/>
+     </Channelcontext.Provider>
+     </UserContext.Provider>
+    
     <Router>
      <Routes>
       {/* <Route path='/' element={<ProtectRoute Component={Home}/>}/>
