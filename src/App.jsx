@@ -28,6 +28,9 @@ import ComponentA from './Component/ComponentA';
 import ComponentB from './Component/ComponentB';
 import DataFetchingOne from './NestedRoutes/DataFetchingOne';
 import DataFetchingTwo from './NestedRoutes/DataFetchingTwo';
+import Count from './NestedRoutes/Count';
+import Button from './NestedRoutes/Button';
+import Parentcomponent from './NestedRoutes/Parentcomponent';
 export const CountContext = createContext()
 const initialState = 0
 
@@ -38,7 +41,10 @@ function App() {
   return (
    <>
   {/* <DataFetchingOne/> */}
-  <DataFetchingTwo/>
+  <Parentcomponent/>
+    {/* <Count text="age" count={age} />
+    <Button>Increment age</Button>
+    <Count text="salary" count={salary}></Count> */}
    </>
   )
 }
